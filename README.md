@@ -28,4 +28,4 @@ So with all this in mind i decided to build Boot Locker, to take the pain and st
 
 **Wireframes**
 
-![Home page](/boot_locker/Wireframes/boot-locker-home.png)
+![Home page](/boot_locker/wireframes/boot-locker-home.png)
