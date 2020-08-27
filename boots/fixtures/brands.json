@@ -1,0 +1,1 @@
+[{"pk": 1, "model": "boots.brand", "fields": {"name": "adidas", "friendly_name": "Adidas"}}, {"pk": 2, "model": "boots.brand", "fields": {"name": "nike", "friendly_name": "Nike"}}, {"pk": 3, "model": "boots.brand", "fields": {"name": "new_balance", "friendly_name": "New Balance"}}]
