@@ -2,5 +2,27 @@ from django.contrib import admin
 from .models import Boot, Brand
 
 # Register your models here.
-admin.site.register(Boot)
-admin.site.register(Brand)
+
+
+class BootAdmin(admin.ModelAdmin):
+    list_display = (
+        'style',
+        'name',
+        'category',
+        'price',
+        'colour',
+        'image',
+    )
+
+    ordering = ('style',)
+
+
+class BrandAdmin(admin.ModelAdmin):
+    list_display = (
+        'friendly_name',
+        'name',
+    )
+
+
+admin.site.register(Boot, BootAdmin)
+admin.site.register(Brand, BrandAdmin)
