@@ -11,10 +11,64 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container">
+    <div class="overlay"></div>
+    <div class="container-fluid">
         <div class="row">
-            <div class="col">
-                {{ boots }}
+            <div class="col text-center mt-3">
+                <h2 class="logo-font text-danger">All Football Boots</h2>
+                <hr class="w-50 mb-1">
+            </div>
+        </div>
+        <div class="row">
+            <div class="product-container col-10 offset-1">
+                <div class="row mt-1 mb-2"></div>
+                <div class="row">
+                    {% for boot in boots %}
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                            <div class="card h-100 border border-success">
+                                {% if boot.image %}
+                                <a href="">
+                                    <img class="card-img-top img-fluid" src="{{ boot.image.url }}" alt="{{ boot.name }}">
+                                </a>
+                                {% else %}
+                                <a href="">
+                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ boot.name }}">
+                                </a>
+                                {% endif %}
+                                <div class="card-body border-0 pt-0">
+                                    <p class="mb-0">{{ boot.category.friendly_name }}</p>
+                                </div>
+                                <div class="card-body border-0 pt-0">
+                                    <p class="mb-0 font-weight-bold"><span class="lead">{{ boot.name }}</span></p>
+                                </div>
+                                <div class="card-body border-0 pt-0">
+                                    <p class="mb-0 font-weight-bold text-primary">Price: <span class="lead">${{ boot.price }}</span></p>
+                                    <p class="mb-0 font-weight-bold">Colour: <span class="lead">{{ boot.colour }}</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        {% if forloop.counter|divisibleby:1 %}
+                            <div class="col-12 d-sm-none mb-5">
+                                <hr>
+                            </div>
+                        {% endif %}                        
+                        {% if forloop.counter|divisibleby:2 %}
+                            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                                <hr>
+                            </div>
+                        {% endif %}
+                        {% if forloop.counter|divisibleby:3 %}
+                            <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                                <hr>
+                            </div>
+                        {% endif %}
+                        {% if forloop.counter|divisibleby:4 %}
+                            <div class="col-12 d-none d-xl-block mb-5">
+                                <hr>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>
