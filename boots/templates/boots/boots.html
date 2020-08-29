@@ -27,11 +27,11 @@
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border border-success">
                                 {% if boot.image %}
-                                <a href="">
+                                <a href="{% url 'boot_detail' boot.id %}">
                                     <img class="card-img-top img-fluid" src="{{ boot.image.url }}" alt="{{ boot.name }}">
                                 </a>
                                 {% else %}
-                                <a href="">
+                                <a href="{% url 'boot_detail' boot.id %}">
                                     <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ boot.name }}">
                                 </a>
                                 {% endif %}
