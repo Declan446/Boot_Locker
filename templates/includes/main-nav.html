@@ -6,8 +6,8 @@
                 All BOOTS
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item ">By Rating</a>
+                <a href="{% url 'boots' %}?sort=price&direction=asc" class="dropdown-item">Price Low To High</a>
+                <a href="{% url 'boots' %}?sort=price&direction=desc" class="dropdown-item ">Price High To Low</a>
                 <a href="" class="dropdown-item ">By Category</a>
                 <a href="{% url 'boots' %}" class="dropdown-item">All Boots</a>
             </div>
@@ -18,10 +18,10 @@
                 ADIDAS
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">Predator Boots</a>
-                <a href="" class="dropdown-item">Copa Boots</a>
-                <a href="" class="dropdown-item">Nemeziz Boots</a>
-                <a href="" class="dropdown-item">All Adidas Boots</a>
+                <a href="{% url 'boots' %}?style=Predator" class="dropdown-item">Predator Boots</a>
+                <a href="{% url 'boots' %}?style=Copa" class="dropdown-item">Copa Boots</a>
+                <a href="{% url 'boots' %}?style=Nemeziz" class="dropdown-item">Nemeziz Boots</a>
+                <a href="{% url 'boots' %}?category=adidas" class="dropdown-item">All Adidas Boots</a>
             </div>
         </li>
 
@@ -30,15 +30,15 @@
                 NIKE
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="" class="dropdown-item">Mercurial Boots</a>
-                <a href="" class="dropdown-item">Phantom Boots</a>
-                <a href="" class="dropdown-item">Tiempo Boots</a>
+                <a href="{% url 'boots' %}?style=Mercurial" class="dropdown-item">Mercurial Boots</a>
+                <a href="{% url 'boots' %}?style=Phantom" class="dropdown-item">Phantom Boots</a>
+                <a href="{% url 'boots' %}?style=Tiempo" class="dropdown-item">Tiempo Boots</a>
                 <a href="" class="dropdown-item">All Nike Boots</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'boots' %}?style=New Balance">
                 NEW BALANCE
             </a>
         </li>
