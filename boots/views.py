@@ -34,8 +34,8 @@ def all_boots(request):
             boots = request.GET['style'].split(',')
             boots = Boot.objects.filter(style__in=boots)
 
-        if 'brand' in request.GET:
-            brands = request.GET['brand'].split(',')
+        if 'category' in request.GET:
+            brands = request.GET['category'].split(',')
             boots = boots.filter(category__name__in=brands)
             brands = Brand.objects.filter(name__in=brands)
 

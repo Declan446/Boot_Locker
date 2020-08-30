@@ -8,7 +8,6 @@
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
                 <a href="{% url 'boots' %}?sort=price&direction=asc" class="dropdown-item">Price Low To High</a>
                 <a href="{% url 'boots' %}?sort=price&direction=desc" class="dropdown-item ">Price High To Low</a>
-                <a href="" class="dropdown-item ">By Category</a>
                 <a href="{% url 'boots' %}" class="dropdown-item">All Boots</a>
             </div>
         </li>
@@ -33,7 +32,7 @@
                 <a href="{% url 'boots' %}?style=Mercurial" class="dropdown-item">Mercurial Boots</a>
                 <a href="{% url 'boots' %}?style=Phantom" class="dropdown-item">Phantom Boots</a>
                 <a href="{% url 'boots' %}?style=Tiempo" class="dropdown-item">Tiempo Boots</a>
-                <a href="" class="dropdown-item">All Nike Boots</a>
+                <a href="{% url 'boots' %}?category=nike" class="dropdown-item">All Nike Boots</a>
             </div>
         </li>
 
@@ -48,11 +47,11 @@
                 PLAYERS BOOTS
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">Messi</a>
-                <a href="" class="dropdown-item">Ronaldo</a>
-                <a href="" class="dropdown-item">Mane</a>
-                <a href="" class="dropdown-item">Van Dijk</a>
-                <a href="" class="dropdown-item">Neymar</a>
+                <a href="{% url 'boots' %}?style=Nemeziz" class="dropdown-item">Messi</a>
+                <a href="{% url 'boots' %}?style=Mercurial" class="dropdown-item">Ronaldo</a>
+                <a href="{% url 'boots' %}?style=New Balance" class="dropdown-item">Mane</a>
+                <a href="{% url 'boots' %}?style=Tiempo" class="dropdown-item">Van Dijk</a>
+                <a href="{% url 'boots' %}?style=Mercurial" class="dropdown-item">Neymar</a>
             </div>
         </li>
     </ul>
