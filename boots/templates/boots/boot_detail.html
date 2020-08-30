@@ -36,6 +36,13 @@
                         <p class="mb-0 font-weight-bold"><span class="lead">{{ boot.name }}</span></p>
                     </div>
                     <div class="card-body border-0 pt-0">
+                        {% if boot.category %}
+                        <p class="small mt-1 mb-0">
+                            <a class="text-muted" href="{% url 'boots' %}?category={{ boot.category.name }}">
+                                <i class="fas fa-tag mr-1"></i>{{ boot.category.friendly_name }}
+                            </a>
+                        </p>
+                        {% endif %}
                         <p class="mb-0 font-weight-bold text-primary">Price: <span class="lead">${{ boot.price }}</span></p>
                         <p class="mb-0 font-weight-bold">Colour: <span class="lead">{{ boot.colour }}</span></p>
                     </div>

@@ -15,13 +15,23 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center mt-3">
-                <h2 class="logo-font text-danger">All Football Boots</h2>
+                <h2 class="logo-font text-primary">All Football Boots</h2>
                 <hr class="w-50 mb-1">
             </div>
         </div>
         <div class="row">
             <div class="product-container col-10 offset-1">
                 <div class="row mt-1 mb-2"></div>
+
+                <div class="col-12 col-md-6 order-md-first">
+                        <p class="text-muted mt-3 text-center text-md-left">
+                            {% if search_term or current_categories or current_sorting != 'None_None' %}
+                                <span><a href="{% url 'boots' %}">Football Boots Home</a> | </span>
+                            {% endif %}
+                            {{ boots|length }} boots{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                        </p>
+                </div>
+
                 <div class="row">
                     {% for boot in boots %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
@@ -42,6 +52,13 @@
                                     <p class="mb-0 font-weight-bold"><span class="lead">{{ boot.name }}</span></p>
                                 </div>
                                 <div class="card-body border-0 pt-0">
+                                    {% if boot.category %}
+                                    <p class="small mt-1 mb-0">
+                                       <a class="text-muted" href="{% url 'boots' %}?category={{ boot.category.name }}">
+                                          <i class="fas fa-tag mr-1"></i>{{ boot.category.friendly_name }}
+                                       </a>
+                                    </p>
+                                    {% endif %}
                                     <p class="mb-0 font-weight-bold text-primary">Price: <span class="lead">${{ boot.price }}</span></p>
                                     <p class="mb-0 font-weight-bold">Colour: <span class="lead">{{ boot.colour }}</span></p>
                                 </div>
