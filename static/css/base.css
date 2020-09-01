@@ -62,6 +62,11 @@ body {
     color: white;
 }
 
+.update-order,
+.remove-order {
+    cursor: pointer;
+}
+
 .text-black {
     color: #000 !important;
 }
