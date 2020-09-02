@@ -62,8 +62,8 @@ body {
     color: white;
 }
 
-.update-order,
-.remove-order {
+.update-link,
+.remove-item {
     cursor: pointer;
 }
 
