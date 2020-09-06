@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'user_profiles/css/user_profile.css' %}">
+    <link rel="stylesheet" href="{% static 'user_profiles/css/profile.css' %}">
 {% endblock %}
 
 {% block page_header %}
@@ -25,4 +25,5 @@
             </div>
         </div>
     </div>
+    {{ profile }}
 {% endblock %}
