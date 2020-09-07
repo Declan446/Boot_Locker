@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Boot, Brand
+from django.db.models.functions import Lower
 
+from .models import Boot, Brand
+from .forms import ProductForm
 # Create your views here.
 
 
@@ -70,3 +72,14 @@ def boot_detail(request, boot_id):
     }
 
     return render(request, 'boots/boot_detail.html', context)
+
+
+def add_product(request):
+    """ Add a boots to the store """
+    form = ProductForm()
+    template = 'boots/add_boot.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
