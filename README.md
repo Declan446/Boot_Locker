@@ -77,7 +77,23 @@ I used Font Awesome for the icons on the shopping bag and profile.
 
 **Wireframes**
 
-![Home page](/boot_locker/wireframes/boot-locker-home.png)
+![First Home Page Plan](/boot_locker/wireframes/boot-locker-home.png)
+
+![Home Page](/boot_locker/wireframes/Home-page-wireframe.jpg)
+
+![Home Page Mobile](/boot_locker/wireframes/Home-page-mobile-wireframe.jpg)
+
+![All Boots Page](/boot_locker/wireframes/all-boot-page.jpg)
+
+![All Boots Mobile Page](/boot_locker/wireframes/all-boot-page-mobile.jpg)
+
+![Shopping Bag Page](/boot_locker/wireframes/shopping-bag-page.jpg)
+
+![Shopping Bag Mobile Page](/boot_locker/wireframes/shopping-bag-page-mobile.jpg)
+
+![Sign UP Page](/boot_locker/wireframes/sign-up-page.jpg)
+
+![Sign Up Mobile Page](/boot_locker/wireframes/sign-up-page-mobile.jpg)
 
 **Models**
 
