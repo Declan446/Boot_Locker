@@ -1,0 +1,1 @@
+web: gunicorn boot_locker.wsgi:application
