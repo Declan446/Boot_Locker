@@ -1,7 +1,7 @@
 # Boot Locker
 
-**About** I have based my project on a webapp that sells Soccer and Rugby boots.I plan to create a clear , easy and well structured web application
-so that Soccer and Rugby enthusiast can find the perfect pair of boots.
+**About** I have based my project on a webapp that sells Football boots.I plan to create a clear , easy and well structured web application
+so that Foootball enthusiast can find the perfect pair of boots.
 
 **Personal Reasons For Creating This Web Application**
 * Trying to find the perfect pair of boots was a long and tedious task when i was younger. Going from shop to shop with my father and not
@@ -13,7 +13,7 @@ So with all this in mind i decided to build Boot Locker, to take the pain and st
 
 **Business Opportunities**
 * Making a percentage of the profit on every pair of boots sold on the app.
-* Advertising for different sports
+* Advertising for Football products
 * Advertising for sports brands like Adidas and Nike for example.
 * Advertising for teams that are looking for new talent.
 * Advertising for Colleges who are offering scholarships.
@@ -30,7 +30,7 @@ The first thing i did in regards to *UX design* is make a list of users who migh
 * Someone who loves football and wants access to the lastest boots.
 * Someone who wants a new pair of football boots but doesnt know what pair they want.
 * A football manager looking for boots for his team.
-* Parents looking for reasonable priced boots for their kids.
+* Parents looking for reasonable priced boots for their teenager.
 * A football club looking for boots with the same colours of their team.
 
 **Users Stories**
@@ -52,18 +52,11 @@ only free multi page design on the bootstrap site that i liked. I used a theme b
 and leaves less room for errors and display problems. 
 
 **Home Page Image**
-For my Home page image i choose a picture of the a fooball stadium. I choose this image because its the image familiar image for 
+For my Home page image i choose a picture of the a fooball stadium. I choose this image because its a familiar image for 
 my target User
 
 **Colours**
-I only used colour in a very small way in my project. I wanted to keep everything black and white except for the logo and images but for
-easy navigation and use i add some colour to key components.
-* Blue for the background of the recipe title on the recipes page.
-* Blue fot Boad Bia's social media links in the footer.
-* Blue for my submit buttons .
-* Green for my edit buttons.
-* Green for the background for recipes names in the sliders on the home page.
-* Red for my Delete buttons.
+
 
 **Icons**
 I used Font Awesome for the icons on the shopping bag and profile.
