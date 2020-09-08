@@ -61,6 +61,12 @@
                                     {% endif %}
                                     <p class="mb-0 font-weight-bold text-primary">Price: <span class="lead">${{ boot.price }}</span></p>
                                     <p class="mb-0 font-weight-bold">Colour: <span class="lead">{{ boot.colour }}</span></p>
+                                    {% if request.user.is_superuser %}
+                                        <small class="ml-3">
+                                            <a href="{% url 'edit_product' boot.id %}">Edit</a> | 
+                                            <a class="text-danger" href="{% url 'delete_product' boot.id %}">Delete</a>
+                                        </small>
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>
