@@ -26,10 +26,10 @@ class BrandAdmin(admin.ModelAdmin):
 
 class ReviewAdmin(admin.ModelAdmin):
     list_display = (
-        'boot'
-        'name'
-        'comment'
-        'rating'
+        'boot',
+        'name',
+        'comment',
+        'rating',
     )
 
 

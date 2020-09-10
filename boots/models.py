@@ -30,7 +30,7 @@ class Review(models.Model):
     boot = models.ForeignKey('Boot', null=True, blank=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=254)
     comment = models.CharField(max_length=254)
-    rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
+    rating = models.DecimalField(max_digits=6, decimal_places=2,)
 
     def __str__(self):
         return self.comment

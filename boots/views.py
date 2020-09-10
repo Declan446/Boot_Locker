@@ -3,9 +3,10 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
+from django.http import HttpResponseRedirect
 
-from .models import Boot, Brand
-from .forms import ProductForm
+from .models import Boot, Brand, Review
+from .forms import ProductForm, commentForm
 # Create your views here.
 
 
@@ -17,7 +18,6 @@ def all_boots(request):
     brands = None
     sort = None
     direction = None
-    style = None
 
     if request.GET:
         if 'sort' in request.GET:
@@ -77,7 +77,7 @@ def boot_detail(request, boot_id):
 
 @login_required
 def add_product(request):
-    """ Add a boots to the store """
+    """ Add a pair of boots to the store """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
@@ -142,3 +142,19 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('boots'))
+
+
+def addreview(request, boot_id):
+    """ Add the comments to the DB """
+    if request.method == 'POST':
+        form = commentForm(request.POST, request.FILES)
+        if form.is_valid():
+            data = Review()
+            data.name = form.cleaned_data['name']
+            data.comment = form.cleaned_data['comment']
+            data.boot = Boot.objects.get(id=boot_id)
+            data.save()
+            messages.success(request, 'Successfully added a review!')
+            return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+        else:
+            messages.error(request, 'Failed to add comment.')
