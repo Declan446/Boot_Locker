@@ -2,7 +2,7 @@ from django import forms
 from .widgets import CustomClearableFileInput
 from .models import Boot, Brand, Review
 
-
+# Boots form
 class ProductForm(forms.ModelForm):
 
     class Meta:
@@ -20,7 +20,7 @@ class ProductForm(forms.ModelForm):
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-black rounded-0'
 
-
+# Comment form
 class commentForm(forms.ModelForm):
     class Meta:
         model = Review

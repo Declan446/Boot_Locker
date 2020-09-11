@@ -151,6 +151,9 @@ enters a wrong url it wont show an error it will just redirect them back to the 
 
 * When deploying to Heroku four of the images wouldnt render due to naming issues. corrected by renaming the images.
 
+* i tried using flake8 but it was showing errors that where there and unfortunately i only had time to fix some of the errors.
+  i didnt get a chance to fix the styling errors.
+
 # Deployment
 
 **Deploying to Heroku**

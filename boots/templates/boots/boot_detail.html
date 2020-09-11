@@ -64,6 +64,7 @@
             action="{% url 'add_to_shopping_bag' boot.id %}"
             method="POST"
           >
+          <!-- form for added boots to the shopping bag -->
             {% csrf_token %}
             <div class="form-row">
               {% with boot.has_sizes as s %} {% if s %}
@@ -191,7 +192,7 @@
       </tbody>
     </table>
 
-    <!--form for boot reviews -->
+    <!--form for adding boot reviews -->
     <form action="addreview/" method="POST">
       {% csrf_token %}
       <div class="caption center-align"><h2>Add A Review</h2></div>
