@@ -138,6 +138,8 @@ The Boot Locker Web Application main Technologies used were as follows:
 * Iphone 5 = No problems.
 * Ipads = No problems,
 
+
+
 # Deployment
 
 **Deploying to Heroku**

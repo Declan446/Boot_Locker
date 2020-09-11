@@ -29,7 +29,6 @@ class ReviewAdmin(admin.ModelAdmin):
         'boot',
         'name',
         'comment',
-        'rating',
     )
 
 

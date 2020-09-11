@@ -13,10 +13,11 @@ class Brand(models.Model):
 
 
 class Boot(models.Model):
+    """ Model for the boots(products) """
     category = models.ForeignKey('Brand', null=True, blank=True, on_delete=models.SET_NULL)
     style = models.CharField(max_length=254)
     name = models.CharField(max_length=254)
-    price = models.DecimalField(max_digits=6, decimal_places=2)
+    price = models.DecimalField(max_digits=6, decimal_places=2, default=0.0)
     has_sizes = models.BooleanField(default=False, null=True, blank=True)
     colour = models.CharField(max_length=254)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
@@ -27,10 +28,9 @@ class Boot(models.Model):
 
 
 class Review(models.Model):
-    boot = models.ForeignKey('Boot', null=True, blank=True, on_delete=models.SET_NULL)
+    boot = models.ForeignKey('Boot', null=True, blank=True, on_delete=models.SET_NULL, related_name='reviews')
     name = models.CharField(max_length=254)
     comment = models.CharField(max_length=254)
-    rating = models.DecimalField(max_digits=6, decimal_places=2,)
 
     def __str__(self):
         return self.comment

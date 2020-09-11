@@ -45,7 +45,7 @@ def all_boots(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter a valid search item!")
+                messages.error(request, "You didn't enter a valid search!")
                 return redirect(reverse('boots'))
 
             queries = Q(name__icontains=query) | Q(colour__icontains=query)
@@ -67,9 +67,10 @@ def boot_detail(request, boot_id):
     """ A view to show selected boot detail """
 
     boot = get_object_or_404(Boot, pk=boot_id)
-
+    reviews = boot.reviews.all()
     context = {
         'boot': boot,
+        'reviews': reviews,
     }
 
     return render(request, 'boots/boot_detail.html', context)
