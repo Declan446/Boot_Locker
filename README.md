@@ -44,18 +44,20 @@ The first thing i did in regards to *UX design* is make a list of users who migh
 # Design
 
 **Theme**
-I got my inspiration for my theme from a mini project i did with the *Code Institute*. The mini project was 
-thorin and company and in this project they used a bootstrap theme called **Clean Blog**. While using this theme 
-in the mini project i found it to be very clear, well structured and easy to navigate. For these reasons i decided 
-to use it for my Irish Recipes web application. One major deciding factor for choosing this theme was it was the
-only free multi page design on the bootstrap site that i liked. I used a theme because it speeds up the design Process
-and leaves less room for errors and display problems. 
+I got my inspiration for my theme from a mini project i did *Boutique Ado*. I used this project for my layout and css. 
 
 **Home Page Image**
 For my Home page image i choose a picture of the a fooball stadium. I choose this image because its a familiar image for 
 my target User
 
 **Colours**
+I didnt use much colour in the site because their is alot of colour in the images of the boots i believe less is more .  
+I only used a colour in a small way.
+**Colour Used**
+* Blue for the top part of the header and all the text and icons white.
+* Green for the background of the free delivery part of the header. i also used green for some buttons and borders of items.
+* Red for delete buttons
+
 
 
 **Icons**
@@ -99,6 +101,8 @@ I used Font Awesome for the icons on the shopping bag and profile.
 
 ![Boots.Brand Model](/media/model_boots.brand.jpg)
 
+![Reviews Model](/media/review-model.jpg)
+
 # Features
 
 **Nav Bar:** The nar bar has four dropdown buttons and one link button(All Boots, Adidas, Nike, New Balance and Players) 
@@ -138,7 +142,14 @@ The Boot Locker Web Application main Technologies used were as follows:
 * Iphone 5 = No problems.
 * Ipads = No problems,
 
+# Errors found while testing:
+* There was a problem while testing the reviews . The reviews were been added to the Database but would not display on the table under the boots.
+It turned out the review wouldnt link to the boot due to incorrect context.
 
+* When testing i entered a wrong url trying to get to the admin and i got a 500 error . so i added some defencesive programming so now if a user 
+enters a wrong url it wont show an error it will just redirect them back to the home page.
+
+* When deploying to Heroku four of the images wouldnt render due to naming issues. corrected by renaming the images.
 
 # Deployment
 
@@ -152,6 +163,11 @@ The Boot Locker Web Application main Technologies used were as follows:
 * set IP and PORT Config Vars.
 * create a secret key in the Config Vars in the heroku settings.
 * now go to the git command line and login to heroku.
+
+**Problems Deploying**
+* images not being displayed because of naming in the Database
+* I couldnt login to heroku in the terminal in gitpod.
+
 
 **Commands to push to heroku**
 1. $ Heroku login.
@@ -176,8 +192,10 @@ https://st2.depositphotos.com/3725083/5769/i/450/depositphotos_57693395-stock-ph
 [Football Stadium ](https://st2.depositphotos.com/3725083/5769/i/450/depositphotos_57693395-stock-photo-stadium.jpg)
 
 **Acknowledgements:**
-* I received most of my inspiration for Boot locker from the mini project Boutique Ado in this course i also got 90% of my code from the Boutique Ado project.
+* I received most of my inspiration for Boot locker from the mini project Boutique Ado in this course. I also got 90% of my code from the Boutique Ado project.
 I was going to display my home page in a different way but after looking at Sports Direct and lifestyles websites the layout which is 
-very similar to Boutique Ado. I decided to take the same approch as Boutique Ado
+very similar to Boutique Ado. I decided to take the same approch as Boutique Ado. I used the css from Boutique Ado because i felt the spacing
+and layout were profect for Boot Locker.
+[Boutique Ado Github](https://github.com/ckz8780/boutique_ado_v1.git)
 
 * I received inspiration for the site from Sports Direct website and lifestyle's website.

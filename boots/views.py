@@ -94,6 +94,7 @@ def add_product(request):
             messages.error(request, 'Failed to add Boots. Please ensure the form is valid.')
     else:
         form = ProductForm()
+        
 
     template = 'boots/add_boot.html'
     context = {
